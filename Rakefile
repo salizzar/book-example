@@ -3,6 +3,7 @@ FILE_NAME = "book-example"
 BOOK_DIR = "book"
 OUT_DIR = "out"
 SOURCE_LANGUAGE_CODE = :en
+SOURCE_COUNTRY_CODE = :US
 
 LANGUAGES = [
   :en,
@@ -69,7 +70,8 @@ namespace :book do
 
   def translate_to_gramma(language)
     idiom, country = language.to_s.split('_')
-    language.to_s.gsub(/_/, '-').gsub(country, country.upcase)
+    country = SOURCE_COUNTRY_CODE.to_s if country.nil?
+    idiom.to_s.gsub(/_/, '-').gsub(country, country.upcase)
   end
 
   task :create_out_dir do
