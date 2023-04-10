@@ -1,0 +1,23 @@
+---
+title:
+- type: main
+  text: Book Example
+- type: subtitle
+  text: An example of a book written using Pandoc and other open source tools
+creator:
+- role: author
+  text: Marcelo Pinheiro
+
+publisher: Marcelo Pinheiro
+rights: © 2023 Marcelo Pinheiro. All rights reserved.
+description: |
+  This is an example of a book written with Pandoc and Markdown.
+
+cover-image: images/cover.png
+documentclass: article
+pdf-engine: mactex
+
+ibooks:
+  version: 1.3.4
+...
+
